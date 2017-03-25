@@ -1,0 +1,4 @@
+the output will be as alert(3) thre times after with 1s delay and its liks this becouse the function will executed only after the loop and at that time the "i"value will be "3"
+
+function AddSix(num){return num + 6;}
+
