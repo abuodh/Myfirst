@@ -38,12 +38,31 @@ add(10)
             };
         }(btnNum);
     }
-</script>
-
-
-
-	
+</script>	
 </body>
 </html>
 
-4-
+4-1
+calculateSum(2, 6,function(sum){console.log(sum)});
+
+4-2
+$.getJSON('http://myapi.com',function(results){
+showResults(results);});
+
+4-3
+calculateSum(2, 6,function(sum){if (sum > 8) {
+    console.log('larger than 8');
+}});
+
+4-4
+$.getJSON('http://myapi.com',function(data){data.map(function (x) { return x * 8; })});
+
+5-
+$.getJSON("https://reqres.in/api/users?delay=3",function(data){
+console.log(data);});
+
+$.getJSON("https://reqres.in/api/users/2", function(data){
+
+console.log(data);});
+
+console.log("hello")  
