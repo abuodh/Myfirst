@@ -1,0 +1,91 @@
+function Person( lastName, name ){
+
+  this.lastName = lastName;
+
+  this.name = name;
+
+
+
+  this.getLastName = function(){
+
+    return this.lastName || 'Not defined';
+
+  };
+
+
+
+  this.getName = function(){
+
+    return this.name || 'Not defined';
+
+  }
+
+}
+
+
+
+function Teacher( lastName, name ){
+
+  Person.call(this, lastName, name);
+
+  return this;
+
+}
+
+
+
+function Student(lastName, name){
+
+  Person.call(this, lastName, name);
+
+  this.homework = [];
+
+  return this;
+
+}
+
+var members = [
+
+  {name: 'Mauro', lastName: 'Mandracchia', type: 'teacher'},
+
+  {name: 'Ali', lastName: 'Barakat', type: 'student'},
+  
+  {name: 'odai' , lastName: 'kakhi' , type: 'student'},
+  
+  {name: 'Abd' , lastName: 'Hsn' , type: 'student'}
+  
+
+];
+
+function HYFClass(){
+
+  this.members = [];
+
+
+
+  this.addMember = function( instanceOfPerson ){
+
+    this.members.push( instanceOfPerson );
+
+  };
+};
+  
+
+  var getAllMemberName = members.map(function(members){
+    console.log(members.name + " " + members.lastName + " " + "is a " + members.type);
+  });
+var getStudents=members.map(function(members){
+   if(members.type == "student")
+   {
+     console.log(members.name + " " + members.lastName);
+   }
+  });
+  var getTeachers=members.map(function(members){
+  
+  if(members.type == "teacher"){
+         console.log(members.name + " " + members.lastName);
+  }
+});
+var getAllMemberLastNam=members.map(function(members){
+  console.log(members.lastName);
+})

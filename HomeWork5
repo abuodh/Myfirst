@@ -1,23 +1,4 @@
-1-
-the output will be as alert(3) thre times after with 1s & 1.1s & 1.2s delay and its becouse the function will executed only 
-after the loop and at that time the "i"value will be "3"
 
-2-1 //the easy one and good working 
-function addSix(n) {
-    return n + 6;    
-}
-addSix(10)
-
-2-2 //the long and also working one
-function addSix(n) {
-    return function CreateBase(num){
-        return n+num
-    }
-}
-var add = addSix(6)
-add(10)
-
-3-
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,11 +13,9 @@ add(10)
 <script type="text/javascript">
     var prizes = ['A Unicorn!', 'A Hug!', 'Fresh Laundry!'];
     for (var btnNum = 0; btnNum < prizes.length; btnNum++) {
-        document.getElementById('btn-' + btnNum).onclick = function(BtnNum){
-            return function() {
-                alert(prizes[BtnNum]);
-            };
-        }(btnNum);
+        document.getElementById('btn-' + btnNum).onclick = function (){
+            alert(prizes[btnNum]);
+        };
     }
 </script>
 
