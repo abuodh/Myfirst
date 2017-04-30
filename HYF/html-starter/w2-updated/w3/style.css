@@ -1,0 +1,135 @@
+#main-logo {
+    margin-left: 50%;
+}
+
+html {
+    min-width: auto;
+}
+
+body {
+    margin-top: 0;
+    font-family: "RO Sans", Calibri, sans-serif;
+}
+
+#ul1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: lightblue;
+}
+
+#ul1 li {
+    float: left;
+}
+
+#ul1 li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#ul1 li a:hover {
+    background-color: white;
+    color: blue;
+}
+
+#nav-bar img {
+    width: 100%;
+    max-height: 400px;
+}
+
+#ul2 {
+    border: solid;
+    background-color: white;
+    position: absolute;
+    left: 20px;
+    border-color: lightblue;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.float-item {
+    float: left;
+    width: 33%;
+    line-height: 40px;
+}
+
+#ul3-3 li {
+    border: solid;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    line-height: 20px;
+    border-color: lightblue;
+    height: 100%;
+    overflow: hidden;
+}
+
+.flex-container {
+    display: -webkit-flex;
+    display: flexbox;
+    flex-wrap: wrap;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.flexbox-p {
+    margin: 10px;
+    width: 45%;
+}
+
+h2 {
+    margin: 20px;
+    padding: 30px;
+}
+
+#part2 {
+    width: 75%
+}
+
+.footer {
+    float: left;
+    width: 31%;
+    display: block;
+}
+
+.footer li {
+    margin: 0;
+    padding-top: 0;
+    display: block;
+}
+
+footer {
+    border: solid;
+
+}
+
+@media (max-width: 700px) {
+    .float-item {
+        float: left;
+        width: 100%;
+        line-height: 40px;
+    }
+    .flexbox-p {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    #ul2 {
+        visibility: hidden;
+    }
+  .footer { width: 100%;
+
+
+  }
+  
