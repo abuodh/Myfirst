@@ -1,0 +1,18 @@
+var http = require('http'),
+    port = 8080,
+    state = 10,
+    server = http.createServer();
+server.listen(port, error => {
+  error ? console.log(error) : console.log('api listening on port', port)
+});
+server.on('request', function(request, response) {
+    console.log('New http request received', request.url);
+    var url = request.url
+    var htmlState = (state) => response.write('<html><head></head><body><h1>STATE NUMBER IS: '+ state +'</h1></body></html>')
+    url === '/state' ? htmlState(state) :
+    url === '/add' ? (state++, htmlState(state)) :
+    url === '/remove' ? (state--, htmlState(state)) :
+    url === '/reset' ? htmlState(state = 10):
+    response.statusCode = 404
+  response.end()
+});
