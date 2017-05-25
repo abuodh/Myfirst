@@ -8,7 +8,8 @@ server.listen(port, error => {
 server.on('request', function(request, response) {
     console.log('New http request received', request.url);
     var url = request.url
-    var htmlState = (state) => response.write('<html><head></head><body><h1>STATE NUMBER IS: '+ state +'</h1></body></html>')
+    var htmlState = (state) => 
+    response.write('<html><head></head><body><h1>STATE NUMBER IS: '+ state +'</h1></body></html>')
     url === '/state' ? htmlState(state) :
     url === '/add' ? (state++, htmlState(state)) :
     url === '/remove' ? (state--, htmlState(state)) :
